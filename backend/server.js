@@ -10,7 +10,7 @@ app.use(cors());
 
 const connectToDB = async () => {
   try {
-    await mongoose.connect('mongodb://0.0.0.0:27017/mydatabase', {
+    await mongoose.connect('mongodb://127.0.0.1:27017/bookserviceDB', {
       useNewUrlParser: true,
       useUnifiedTopology: true
 
@@ -26,20 +26,21 @@ const connectToDB = async () => {
 connectToDB();
 
 
-const contactSchema = new mongoose.Schema({
-  Date: String,
+const bookserviceSchema = new mongoose.Schema({
+
   Name: String,
+  Phno: Number,
   EmailId: String,
   services: String,
-  Phno: Number
+  message:String
   // Add other fields as needed
 });
 
-const ContactModel = mongoose.model('Contact', contactSchema, 'contacts');
+const BookServices = mongoose.model('BookServices', bookserviceSchema, 'bookservices');
 
-app.get('/api/data', async (req, res) => {
+app.get('/getbookedservice/data', async (req, res) => {
   try {
-    const data = await ContactModel.find();
+    const data = await BookServices.find();
     res.json(data);
   } catch (error) {
     console.error(error);

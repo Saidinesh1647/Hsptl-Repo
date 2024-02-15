@@ -47,6 +47,10 @@ body {
     transition: 0.3s;
 }
 
+.nav-item-logout{
+    margin-top: 100px;
+}
+
 /* .sidebar a:hover {
     color: #22b175;
 } */

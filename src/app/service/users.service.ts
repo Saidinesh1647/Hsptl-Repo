@@ -9,14 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class Usersservice {constructor(private http: HttpClient) { }
   getusers() {
-    return this.http.get('http://localhost:5000/api/data')
+    return this.http.get('http://localhost:5000/getbookedservice/data')
   }
 
-  
+
 }
 
 
-  
+
 
 
 
