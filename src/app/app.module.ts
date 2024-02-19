@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './guards/auth.guard';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AuthService } from './auth.service';
     ServicesComponent,
     LoginComponent,
     RegisterComponent,
+    FilterPipe,
     
 
 
@@ -48,7 +50,7 @@ import { AuthService } from './auth.service';
 export class AppModule
  {
   constructor(private router: Router) {
-    console.log(this.router.config);
+    // console.log(this.router.config);
 
 }
  }

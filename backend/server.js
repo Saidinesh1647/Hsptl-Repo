@@ -27,11 +27,11 @@ connectToDB();
 
 
 const bookserviceSchema = new mongoose.Schema({
-
+  Date:String,
   Name: String,
   Phno: Number,
   EmailId: String,
-  services: String,
+  service: String,
   message:String
   // Add other fields as needed
 });

@@ -4,7 +4,7 @@
     <h2 style="color: #1da8ff; text-align: center;font-family:cursive;">Login</h2>
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" id="email" formControlName="email" placeholder="Enter your email" />
+      <input   id="name" type="email" id="email" formControlName="email" placeholder="Enter your email" />
       <div *ngIf="emailControl?.hasError('required') && emailControl?.touched" class="error-message">
         Email is required.
       </div>

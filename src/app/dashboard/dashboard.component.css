@@ -42,13 +42,13 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 18px;
-     color:red ; 
+    color: red;
     display: block;
     transition: 0.3s;
 }
 
-.nav-item-logout{
-    margin-top: 100px;
+.nav-item-logout {
+    margin-top: 10px;
 }
 
 /* .sidebar a:hover {
@@ -61,8 +61,9 @@ body {
 }
 
 #sidebarMenu {
-    background-color: rgb(0, 0, 0) !important;
-     /* color: white;  */
+    background-color:#1d5370!important;
+    /* background-color: rgb(220, 224, 228) !important; */
+    /* color: white;  */
     /* You may want to set the text color to white or another readable color on a dark background */
 }
 
@@ -86,25 +87,26 @@ body {
     border: none;
     font-size: 18px;
     color: #ddd;
-    
+
     /* border: 2px solid rgb(204, 128, 246); */
 }
-img{
+
+img {
     height: 25px;
     width: 30px;
     background-color: #111;
 }
-h6{
+
+h6 {
     font-size: 16px;
 }
 
-.aa strong{
-    margin-bottom: 180px;
+.aa strong {
+    margin-bottom: 18px;
 }
-.img1{
-    height: 70px;
-    width: 50px;
-    margin-left: 80px;
-
-
-}
+.nav-item-logout {
+    margin-left: -20px; /* Adjust the value as needed */
+  }
+  .nav-item h6{
+    color: aliceblue;
+  }
