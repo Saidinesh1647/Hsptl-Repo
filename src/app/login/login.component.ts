@@ -1,6 +1,6 @@
 // login.component.ts
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../servicelogin/login.service';
 import { Observable } from 'rxjs';
@@ -66,4 +66,10 @@ export class LoginComponent implements OnInit {
     private handleFailedLogin() {
       this.loginError = true;
     }
+
+    resetForm(form: FormGroup): void {
+      // Implement the logic to reset the form here
+      form.reset(); // This is a basic example, adjust as needed
+    }
+
   }

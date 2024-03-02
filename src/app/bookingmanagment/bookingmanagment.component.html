@@ -6,7 +6,7 @@
         <input type="text" [(ngModel)]="searchText" placeholder="Search..." class="small-search-bar">
       </div>
       <tr>
-        <th class="dd">Service Request Date</th>
+        <th class="dd">ServiceRequest<br>Date</th>
         <th class="dd">Service Request By</th>
         <th class="dd">Phone No</th>
         <th class="dd">Email Id</th>
@@ -16,8 +16,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let user of users | filter: searchText">
-        <td>{{ user.Date }}</td>
-        <td>{{user.Name }}</td>
+        <td class="aa">{{ user.Date }}</td>
+        <td class="bb">{{user.Name }}</td>
         <td>{{user.Phno}}</td>
         <td> {{ user.EmailId }}</td>
         <td> {{ user.service }}</td>

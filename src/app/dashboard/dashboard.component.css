@@ -61,7 +61,7 @@ body {
 }
 
 #sidebarMenu {
-    background-color:#1d5370!important;
+    background-color: #272829 !important;
     /* background-color: rgb(220, 224, 228) !important; */
     /* color: white;  */
     /* You may want to set the text color to white or another readable color on a dark background */
@@ -99,14 +99,37 @@ img {
 
 h6 {
     font-size: 16px;
+    margin-bottom: -10px;
 }
 
 .aa strong {
     margin-bottom: 18px;
 }
+
 .nav-item-logout {
-    margin-left: -20px; /* Adjust the value as needed */
-  }
-  .nav-item h6{
+    margin-left: -20px;
+    /* Adjust the value as needed */
+}
+
+.nav-item h6 {
     color: aliceblue;
-  }
+}
+
+hr {
+    height: 2px;
+    background-color: #edeff1; /* Default color */
+    border: none;
+    margin: 20px 0;
+    animation: hrAnimation 2s infinite alternate;
+}
+
+@keyframes hrAnimation {
+    0% {
+        width: 50%; /* Initial width */
+        background-color: #ffff; /* Initial color */
+    }
+    100% {
+        width: 80%; /* Final width */
+        background-color: #ffff; /* Final color */
+    }
+}

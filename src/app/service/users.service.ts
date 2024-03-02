@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class Usersservice {constructor(private http: HttpClient) { }
+export class Usersservice {
+  constructor(private http: HttpClient) { }
   getusers() {
     return this.http.get('http://localhost:5000/getbookedservice/data')
   }

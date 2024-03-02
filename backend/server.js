@@ -27,12 +27,12 @@ connectToDB();
 
 
 const bookserviceSchema = new mongoose.Schema({
-  Date:String,
+  Date: String,
   Name: String,
   Phno: Number,
   EmailId: String,
   service: String,
-  message:String
+  message: String
   // Add other fields as needed
 });
 
@@ -65,10 +65,25 @@ app.get('/api/login', async (req, res) => {
     res.json(data);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
+
+const serviceSchema = new mongoose.Schema({
+  service: String
+});
+const ServiceModel = mongoose.model('service', serviceSchema, 'service');
+
+app.get('/api/service', async (req, res) => {
+  try {
+    const data = await ServiceModel.find();
+    res.json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 const port = 5000;
 app.listen(port, () => {
   console.log("server is started successfully");
